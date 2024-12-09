@@ -14,6 +14,10 @@ void diaAnterior(int *dia, int *mes, int *ano){
         *dia = 30;
         (*mes)--;
     }
+    else if ((*mes == 2 ||*mes == 4 ||*mes == 6 ||*mes == 8 ||*mes == 9 ||*mes == 11) && *dia == 1){
+        *dia = 31;
+        (*mes)--;
+    }
     else { 
         (*dia) --;
     }
