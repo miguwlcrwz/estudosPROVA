@@ -31,7 +31,7 @@ Esse estudo foi desenvolvido com as seguintes tecnologias:
 
 O "AV2 FAC" são as resoluções das AV2 anteriores de FAC.
 
-- [DRIVE COM AS PROVAS](https://www.friv.com)
+- [DRIVE COM AS PROVAS](https://drive.google.com/drive/folders/1GhnXliqTY-DuOUpG5-I94VgtF8E1ISvl?usp=sharing)
 
 ## :memo: LICENÇA
 
