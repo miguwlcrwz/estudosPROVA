@@ -17,7 +17,7 @@ PROGRAMA EXCLUSIVO para ESTUDO da linguagem C.
 <br>
 
 <p align="center">
-  <img alt="AV2 FAC" src="download.JPG" width="100%">
+  <img alt="AV2 FAC" src="estudando.jpeg" width="100%">
 </p>
 
 ## 🌐 TECNOLOGIAS
