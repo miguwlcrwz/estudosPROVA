@@ -15,15 +15,15 @@ void descobre_xy (int ano, int *x, int *y){
     }
 }
 
-int descobreDataPascoa (int *dia, int *mes, int ano){
+void descobreDataPascoa (int *dia, int *mes, int ano){
     int x,y;
     descobre_xy(ano,&x,&y);
 
     int A = ano % 19;                          	
     int B = ano % 4;             	
     int C = ano % 7;
-    int D = (19 * A + *dia) % 30;
-    int E = (2 * B + 4 * C + 6 * D + *mes) % 7;
+    int D = (19 * A + x) % 30;
+    int E = (2 * B + 4 * C + 6 * D + y) % 7;
 
     if( (D + E) > 9){
         *dia = (D + E - 9);
@@ -41,11 +41,10 @@ int descobreDataPascoa (int *dia, int *mes, int ano){
     else if(D == 25 && *dia == 24 && *mes == 4 && A > 10){
         *dia = 18;
     }
-    return 1;
 }
 int main(){
     int ano = 2024;
-    int dia, mes;
+    int dia=0, mes=0;
     descobreDataPascoa(&dia,&mes,ano);
-    printf("data: %d/%d/%d", dia, mes,ano);
+    printf("data da páscoa: %d/%d/%d", dia, mes,ano);
 }
