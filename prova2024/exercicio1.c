@@ -4,7 +4,7 @@ void diaAnterior(int *dia, int *mes, int *ano){
     if (*mes == 1 && *dia == 1){
         *dia = 31;
         *mes = 12;
-        *ano = *ano - 1;
+        (*ano) --;
     }
     else if (*mes == 3 && *dia == 1){
         *dia = 28;
@@ -29,23 +29,23 @@ int main (void){
     while (1){ 
         printf("qual a prioridade do projeto? NORMAL = 1 || ALTA = 2 (digite -1 para encerrar): ");
         scanf("%d",&prioridade);
-        if(prioridade < 0){
+         if(prioridade < 0){
             break;
         }
+        printf("\ndigite a data (DD/MM/AAAA): ");
+        scanf("%d/%d/%d",&dia,&mes,&ano);
+        
         if(prioridade == 1){
             normal++;
         }
-        else {altera ++;
+        else { 
+            altera ++; 
+            diaAnterior(&dia, &mes, &ano);
         }
         percentual = (altera/(normal + altera)) * 100;
-        printf("\ndigite a data (DD/MM/AAAA): ");
-        scanf("%d/%d/%d",&dia,&mes,&ano);
-        if (prioridade == 2){
-            diaAnterior(&dia, &mes, &ano); 
-        }
         printf("\n%d/%d/%d", dia, mes,ano);
         printf("\n");
-        }
+    }
     printf("percentual alterado: %.2f%%",percentual);
     return 0;
 }
