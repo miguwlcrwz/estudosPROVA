@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define FUNC
 
 float encontraMenor(int empregados, float vSal[]){
     if (empregados <= 0){
