@@ -14,8 +14,25 @@ float encontraMenor(int empregados, float vSal[]){
     return menor; // retorna o menor salário encontrado
 }
 
+void encontraDifMenorRetornaSoma (float menor, int empregados, int vInsc[], float vSal[]){
+    float soma = 0.0;
+    for(int i = 0; i < empregados; i++){
+        float dif = vSal[i] - menor;
+        printf("\na diferença da incrição %d é de %.2f",vInsc[i], dif);
+        soma+=dif;
+    }
+    printf("\na soma das diferenças é de:%.2f",soma);
+}
+
+
 int main(void){  
     int vInsc [6]={1010,1020,1030,1040,1050,1060};  
-    float vSal[6]={1000.00,4020.00,900.00,10400.00,20000.00,1000.00};  
+    float vSal [6]={1000.00,4020.00,900.00,10400.00,20000.00,1000.00};  
+
+    float menor = encontraMenor(6, vSal);
+    printf("menor salário: %.2f",menor);
+    encontraDifMenorRetornaSoma(menor, 6, vInsc, vSal);
+
     return 0;  
+
 } 
