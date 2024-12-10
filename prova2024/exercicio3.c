@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-void zera (int v[], int n){  
- int i;  
- for (i=0;i<n;i++) v[i]=0;  
+void zera (int v[], int n){   
+ for (int i=0;i<n;i++) v[i]=0;  
 }
 
 int carrega_prods(int v1[],float v2[], int n){   v1[0]= 203;v2[0]=10.0;  
